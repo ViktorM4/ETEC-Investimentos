@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Etec Invest</title>
+</head>
+
+<body>
+    <header>
+        <i class="fa-solid fa-sack-dollar"></i>
+        <h1>ETEC INVEST</h1>
+    </header>
+
+    <main>
+        <section id="tabela">
+            <h2>Calcule o retorno do seu Investimento</h2>
+            <form onsubmit="calcularInvestimento()">
+                <section class="campos">
+                    <section class="campo">
+                        <label for="nome">Nome do investidor</label>
+                        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+                    </section>
+                    <section class="campo">
+                        <label for="capital">Capital Inicial</label>
+                        <input type="number" id="capital" required>
+                    </section>
+                    <section class="campo">
+                        <label for="juros">Taxa de Juros</label>
+                        <input type="number" id="juros" step="0.1" required>
+                    </section>
+                    <section class="campo">
+                        <label for="meses">Numero de meses</label>
+                        <input type="number" name="meses" id="meses">
+                    </section>
+                </section>
+                <button id="botao">Calcular o montante</button>
+            </form>
+
+        </section>
+    </main>
+<footer>Desenvolvido por vitor matos</footer>
+<script src="/script.js"></script>
+</body>
+
+</html>
