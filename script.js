@@ -1,11 +1,15 @@
-const nome = document.getElementById("nome");
-const capital = document.getElementById("capital");
-const juros = document.getElementById("juros");
-const meses = document.getElementById("meses");
+const nomeDoInvestidor = document.getElementById("nomeDoInvestidor")
+const capitalInicial = document.getElementById("capitalInicial")
+const taxaDeJuros = document.getElementById("taxaDeJuros")
+const numeroDeMeses = document.getElementById("numeroDeMeses")
 
 function calcularInvestimento() {
-    let retorno = capital.value * ((1 + (juros.value / 100))** meses.value)
-    let mensagem = nome.value + " seu retorno liquido é de: " + retorno.toFixed(2)
+
+    let valorCapitalInicial = parseFloat(capitalInicial.value);
+    let valorNumeroDeMeses = parseInt(numeroDeMeses.value);
+    let valorTaxaDeJuros = parseFloat(taxaDeJuros.value) / 100;
+    let retorno = valorCapitalInicial * Math.pow(1 + valorTaxaDeJuros, valorNumeroDeMeses);
+    let mensagem = nomeDoInvestidor.value+" seu retorno liquido é de: "+ retorno.toFixed(2)
     alert(mensagem)
 
 }
